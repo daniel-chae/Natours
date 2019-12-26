@@ -53,6 +53,7 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center; /* inline block works just like a text. If we want to align them, we have to use text-align not margin. for white button*/
 }
 
 .heading-primary {
@@ -60,6 +61,8 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden; /*  */
+    margin-bottom: 60px;
+
 }
 
 .heading-primary-main {
@@ -80,10 +83,37 @@ body {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
-
     animation: moveInRight 1s ease-out;
 }
 
+/* Buttons */
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block; /* In default <a> tag is inline element */
+    border-radius: 100px;
+    transition: all .3s /* Transition must be placed in the original state */
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.2); /* offset to X, offset to Y, blur, color of shadow*/
+}
+
+
+.btn:active { /* When we click a button */
+    transform: translateY(-1px); /* not from the previous position but from the original position */
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);/* offset to X, offset to Y, blur */
+}
+
+.btn-white {
+    color: #555;
+    background-color: #fff;
+}
+
+/* Animations */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
