@@ -94,7 +94,8 @@ body {
     padding: 15px 40px;
     display: inline-block; /* In default <a> tag is inline element */
     border-radius: 100px;
-    transition: all .3s /* Transition must be placed in the original state */
+    transition: all .3s; /* Transition must be placed in the original state */
+    position: relative;
 }
 
 .btn:hover {
@@ -113,11 +114,38 @@ body {
     background-color: #fff;
 }
 
+.btn::after { /* Right after the element */
+    content: ""; /* content must be specificed any time */
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 1s ease-out .75s; /* last attribute is animation delay */
+    animation-fill-mode: backwards; /* apply animation at 0% automatically before the start */
+}
+
 /* Animations */
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-30%);
+        transform: translateX(100px);
     }
 
     80% {
@@ -131,7 +159,7 @@ body {
 @keyframes moveInRight{
     0% {
         opacity: 0;
-        transform: translateX(30%);
+        transform: translateX(100px);
     }
 
     80% {
@@ -139,5 +167,20 @@ body {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes moveInBottom{
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    80% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        opacity:1;
     }
 }
