@@ -7,6 +7,7 @@
         url(../img/hero.jpg); /* to right | to right bottom | to left | 90deg */
     background-size: cover; /* Even if the width of the image is bigger than the viewport, it tries to fit the image within the container. Horizontal part will be cut-off. Which part to be cut off is decided by background-position*/
     background-position: top; /* bottom|center */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     /* polygon: 다각형 */
     position: relative;

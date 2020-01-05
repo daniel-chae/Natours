@@ -34,6 +34,13 @@
             background-color: $color-white;
         }
     }
+    &--green {
+        color: $color-white;
+        background-color: $color-primary;
+        &::after{
+            background-color: $color-primary;
+        }
+    }
     
     &::after { /* Right after the element */
         content: ""; /* content must be specificed any time */
