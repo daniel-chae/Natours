@@ -13,6 +13,22 @@
         <title>Natours | Exciting tours for adventurous people</title>
     </head>
     <body>
+        <div class="navigation">
+            <input type="checkbox" id="navi-toggle" class="navigation__checkbox"></input>
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            <div class="navigation__background">&nbsp;</div>
+            <div class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About natours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>your benefits</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>popular tours</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>stories</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>book now</a></li>
+                </ul>
+            </div>
+        </div>
         <header class="header">
             <div class="header__logo-box">
                 <img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -202,7 +218,7 @@
                 <div class="row">
                     <div class="story">
                         <figure class="story__figure">
-                            <img class="story__figure-image" src="/img/nat-8.jpg" alt="Person on a tour">
+                            <img class="story__figure-image" src="./img/nat-8.jpg" alt="Person on a tour">
                             <figcaption class="story__figure-caption">mary smith</figcaption>
                         </figure>
                         <div class="story__figure-text">
@@ -214,7 +230,7 @@
                 <div class="row">    
                     <div class="story">
                         <figure class="story__figure">
-                            <img class="story__figure-image" src="/img/nat-9.jpg" alt="Person on a tour">
+                            <img class="story__figure-image" src="./img/nat-9.jpg" alt="Person on a tour">
                             <figcaption class="story__figure-caption">jack wilson</figcaption>
                         </figure>
                         <div class="story__text">
@@ -270,6 +286,30 @@
                     </div>
                 </div>
             </section>
+            <footer class="footer">
+                <div class="footer__logo-box">
+                    <img src="./img/logo-green-2x.png" alt="footer logo" class="footer__logo">
+                </div>
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="footer__navigation">
+                            <ul class="footer__list">
+                                <li class="footer__item"><a href="#" class="footer__link">company</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">contact us</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">careers</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">privacy policy</a></li>
+                                <li class="footer__item"><a href="#" class="footer__link">terms</a></li>    
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <p class="footer__copyright">
+                            Built by <a href="#" class="footer__link">Hyun Chae</a> for his online course <a href="#" class="footer__link">Advanced CSS and Sass</a>.
+                            Copyright &copy; by Hyun Chae. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the original author, Hyun Chae, is of course highly appreciated!
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </main>
         <!--
         <section class"grid-test">
